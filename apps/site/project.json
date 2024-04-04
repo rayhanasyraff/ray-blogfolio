@@ -7,9 +7,18 @@
   "// targets": "to see all targets run: nx show project site --web",
   "targets": {
     "build": {
-      "executor": "@nx/web:webpack",
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
+        "outputPath": "dist/site",
         "postcssConfig": "apps/site/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "."
+        },
+        "production": {}
       }
     }
   }
