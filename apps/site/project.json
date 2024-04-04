@@ -11,7 +11,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/site",
+        "outputPath": "dist/apps/site",
         "postcssConfig": "apps/site/postcss.config.js"
       },
       "configurations": {
